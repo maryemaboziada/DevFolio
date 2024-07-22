@@ -1,0 +1,468 @@
+:root {
+    --blue-color: #0078ff;
+    --title-grey-color: #1e1e1e;
+    --dark-grey-color: #4e4e4e;
+    --body-bg-grey: #F5F5F5;
+    --light-blue-color: #cde1f8;
+}
+
+body {
+    background-color: var(--body-bg-grey);
+}
+
+.text-blue {
+    color: var(--blue-color);
+}
+
+.btn-primary-custom {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--blue-color);
+    --bs-btn-border-color: var(--blue-color);
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #3393ff;
+    --bs-btn-hover-border-color: var(--light-blue-color);
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: var(--light-blue-color);
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: var(--blue-color);
+    --bs-btn-disabled-border-color: var(--blue-color);
+}
+
+.btn-primary-custom:hover {
+    box-shadow: 0 0 0 4px var(--light-blue-color);
+}
+
+.section-title {
+    font-weight: bold;
+    font-size: 3rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.section-subtitle {
+    text-align: center;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.section-subtitle::after {
+    content: "";
+    position: absolute;
+    height: 5px;
+    background-color: var(--blue-color);
+    bottom: 0;
+    right: 50%;
+    width: 50px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+.icon i {
+    color: black;
+    font-weight: bold;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: var(--blue-color) 10px solid;
+    font-size: 40px;
+    transition: color 0.5s, border-color 0.5s, background-color 0.5s;
+}
+
+
+/* Navbar Style */
+nav .navbar-brand {
+    letter-spacing: 1px;
+}
+
+nav .nav-item .nav-link,
+.navbar-nav .nav-link.active {
+    color: white;
+    font-weight: 500;
+    text-transform: uppercase;
+    position: relative;
+}
+
+.navbar-expand-lg .navbar-nav .nav-link {
+    padding: 0;
+}
+
+.navbar-expand-lg .navbar-nav .nav-item {
+    padding: 1rem 0;
+    padding-left: 2rem;
+}
+
+nav .nav-item .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 100%;
+    transition: right 0.5s;
+    background-color: white;
+    height: 2px;
+}
+
+.navbar-nav .nav-link.active::after {
+    right: 20%;
+}
+
+nav .nav-item:hover .nav-link::after {
+    right: 20%;
+}
+
+.navbar-nav .nav-link.show {
+    color: white;
+}
+
+
+.dropdown-menu {
+    border-radius: 0;
+}
+
+.dropdown-menu .dropdown-item:hover {
+    background-color: transparent;
+    color: var(--blue-color);
+
+}
+
+.dropdown-menu .dropdown-item {
+    color: var(--dark-grey-color);
+    font-weight: 600;
+}
+
+.dropdown>.dropdown-menu {
+    top: 150%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s, top 0.5s;
+}
+
+.dropdown:hover>.dropdown-menu {
+    opacity: 1;
+    top: 100%;
+    visibility: visible;
+}
+
+.dropend .dropdown-menu {
+    left: 80%;
+    opacity: 0;
+    visibility: hidden;
+    transition: left 0.5s, opacity 0.5s;
+}
+
+.dropend:hover>.dropdown-menu {
+    opacity: 1;
+    left: 100%;
+    visibility: visible;
+}
+
+.dropdown-item {
+    min-width: 200px;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.dropend .dropdown-item {
+    cursor: pointer;
+}
+
+/* Header Style */
+header {
+    background-image: url("pics/hero-bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+header .content .hero-header {
+    font-size: 4.5rem;
+}
+
+header .content .hero-frames::after {
+    content: "";
+    animation-name: hero-subtitle-freelancer;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes hero-subtitle-freelancer {
+    0% {
+        content: "|";
+    }
+
+    4% {
+        content: "F |";
+    }
+
+    8% {
+        content: "Fr |";
+    }
+
+    12% {
+        content: "Fre |";
+    }
+
+    16% {
+        content: "Free |";
+    }
+
+    20% {
+        content: "Freel |";
+    }
+
+    24% {
+        content: "Freela |";
+    }
+
+    28% {
+        content: "Freelan |";
+    }
+
+    32% {
+        content: "Freelanc |";
+    }
+
+    36% {
+        content: "Freelance |";
+    }
+
+    40% {
+        content: "Freelancer |";
+    }
+
+    60% {
+        content: "Freelancer |";
+    }
+
+    64% {
+        content: "Freelance |";
+    }
+
+    68% {
+        content: "Freelanc |";
+    }
+
+    72% {
+        content: "Freelan |";
+    }
+
+    76% {
+        content: "Freela |";
+    }
+
+    80% {
+        content: "Freel |";
+    }
+
+    84% {
+        content: "Free |";
+    }
+
+    88% {
+        content: "Fre |";
+    }
+
+    92% {
+        content: "Fr |";
+    }
+
+    96% {
+        content: "F|";
+    }
+
+    100% {
+        content: "|";
+    }
+}
+
+/* About Style */
+#about {
+    --main-text-color: --dark-grey-color;
+}
+
+.about {
+    color: var(--main-text-color);
+}
+
+.text-title {
+    font-size: 1.1rem;
+    color: var(--title-grey-color);
+    font-weight: 600;
+}
+
+.about .progress {
+    background-color: var(--light-blue-color);
+    height: 12px;
+}
+
+.about-title {
+    position: relative;
+}
+
+.about-title::after {
+    content: "";
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 100px;
+    height: 3px;
+    background-color: var(--blue-color);
+}
+
+/* Services Style */
+.services {
+    text-align: center;
+}
+
+.services .inner:hover .icon i {
+    color: white;
+    border-color: var(--light-blue-color);
+    background-color: var(--blue-color);
+}
+
+
+/* Counter Style */
+.counter {
+    background-image: url("pics/counters-bg.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.overlay-blue {
+    background-color: rgba(0, 119, 255, 0.65);
+}
+
+.counter .icon i {
+    width: 75px;
+    height: 75px;
+    color: var(--light-blue-color);
+    font-size: 32px;
+    border-color: var(--light-blue-color);
+    display: inline-block;
+}
+
+/*Portfolio Style */
+
+.portfolio .work-item:hover .work-img img {
+    transform: scale(1.3, 1.3);
+}
+
+.portfolio .work-item .work-img img {
+    transition: transform 1s;
+}
+
+.portfolio .work-item .work-caption .work-subtitle {
+    font-size: 0.8rem;
+    color: var(--dark-grey-color);
+}
+
+.portfolio .work-item .work-caption .btn {
+    font-size: 40px;
+    padding: 0;
+    max-width: 25%;
+}
+
+.portfolio .work-item .work-caption .btn:hover {
+    color: var(--blue-color);
+}
+
+.portfolio .modal-dialog {
+    min-width: calc(200px + 30vw);
+}
+
+/* Dev-Sliders Style */
+.dev-sliders {
+    background-image: url("pics/overlay-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.dev-sliders .carousel {
+    padding: 7rem 0;
+}
+
+.dev-sliders .dev-img img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.dev-sliders .developer-text p {
+    max-width: 900px;
+}
+
+.dev-sliders .carousel-indicators button {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+/* Blog Style */
+
+.blog .card-icon {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+}
+
+.blog .card-title {
+    transition: color 1s;
+}
+
+.blog .card-title:hover {
+    color: var(--blue-color);
+    cursor: pointer;
+}
+
+.blog .card-footer a {
+    transition: color 1s;
+}
+
+.blog .card-footer a:hover {
+    color: var(--blue-color);
+}
+
+
+/*  Contact Style  */
+.contact {
+    background-image: url("pics/overlay-bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.contact .contact-icons .icon-sm {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 4px solid var(--blue-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.7s, border-color 0.7s, color 0.7s;
+}
+
+.contact .contact-icons .icon-sm i {
+    font-size: 20px;
+}
+
+
+.contact .contact-icons .icon-sm:hover {
+    background-color: var(--blue-color);
+    border-color: var(--light-blue-color);
+    color: white;
+}
+
+
+/* Footer Style */
+footer {
+    background-color: #0062d3;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
